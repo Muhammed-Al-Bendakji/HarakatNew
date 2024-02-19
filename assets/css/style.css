@@ -400,6 +400,40 @@ body {
   margin: 0;
 }
 
+.custom-title{
+  color: #661b17;
+  font-size: 12px;
+}
+
+.intro-about .intro-content-text .exper2 {
+  overflow: hidden;
+}
+
+.intro-about .intro-content-text .exper2 .numb-ex > span {
+  font-size: 120px;
+  line-height: 1.2;
+  float: left;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.v-light .intro-about .intro-content-text .exper2 .numb-ex > span {
+  color: #000;
+}
+
+.intro-about .intro-content-text .exper2 h4 {
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.intro-about .intro-content-text .exper2 .numb-ex > span {
+  font-size: 80px;
+}
+.intro-about .intro-content-text .exper2 h4 {
+  margin-top: 20px;
+}
+
 /* Grouping content
 	 ========================================================================== */
 /**
@@ -4756,7 +4790,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 }
 
 .contact-up:hover a .hiring {
-  color: #fff;
+  color: #661b17;
 }
 
 .v-light .contact-up:hover a .hiring {
@@ -5934,7 +5968,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  background: #000;
+  background: #661b17;
 }
 
 .v-light .brand-client .wapper-client .logo-box .info .content {
@@ -6493,8 +6527,8 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 
 .intro-about .img-box .img-cent {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 122%;
 }
 
 .intro-about .img-box .img-cent .img-container {
