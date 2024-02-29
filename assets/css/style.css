@@ -400,10 +400,6 @@ body {
   margin: 0;
 }
 
-.custom-title{
-  color: #661b17;
-  font-size: 12px;
-}
 
 .intro-about .intro-content-text .exper2 {
   overflow: hidden;
@@ -9031,6 +9027,10 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
+.headefr-fexid .project-title .title-text-header .title-text-header-inner2 {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, .5);
+}
 
 .headefr-fexid .project-title .title-text-header .title-text-header-inner span {
   display: block;
@@ -12353,7 +12353,7 @@ footer .copyright-social ul li:last-child {
 
 .footer .footer-links {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 767px) {
