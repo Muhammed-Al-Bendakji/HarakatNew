@@ -1578,6 +1578,13 @@ body > * {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .background-mask {
+      display: none !important;
+  }
+}
+
+
 .main-root:before,
 .gallery-col .box-im:before,
 .box-gallery-vertical .mask-bg:before,

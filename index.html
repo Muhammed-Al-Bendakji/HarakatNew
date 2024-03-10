@@ -138,8 +138,8 @@
                 <div class="headefr-fexid headefr-fexid-onepage" data-dsn-header="project">
                     <div class="bg has-top-bottom" id="dsn-hero-parallax-img" data-dsn-ajax="img">
                         <div class=" " data-dsn="video" data-overlay="4">
-                            <video class="bg-image cover-bg dsn-video" autoplay loop muted playsinline>
-                                <source src="assets/img/slider.mp4" type="video/mp4">
+                            <video id="myvid" class="bg-image cover-bg dsn-video" autoplay loop muted playsinline>
+                                <source src="" type="video/mp4">
                                 Your browser does not support HTML5 video.
                             </video>
                         </div>
@@ -714,8 +714,8 @@
 
                             <div class="item photography">
                                 <a data-dsn-grid="move-up">
-                                    <img class="has-top-bottom" src="assets/img/Projectsnew/5.jpeg" alt="" />
-                                    <div class="item-border"></div>
+                                    <img class="has-top-bottom" src="assets/img/Projectsnew/5.png" alt="" />
+                                    <!-- <div class="item-border"></div> -->
                                     <div class="item-info">
                                         <h5 class="cat">Medical group</h5>
                                         <h4>We care</h4>
@@ -728,8 +728,9 @@
 
                             <div class="item brand">
                                 <a class="effect-ajax" data-dsn-ajax="work" data-dsn-grid="move-up">
-                                    <img class="has-top-bottom" src="assets/img/Projectsnew/2.jpg" alt="" />
-                                    <div class="item-border"></div>
+                                    <img class="has-top-bottom" style="top: -38px !important;"
+                                        src="assets/img/Projectsnew/2.png" alt="" />
+                                    <!-- <div class="item-border"></div> -->
                                     <div class="item-info">
                                         <h5 class="cat">City light outdoor advertising</h5>
                                         <h4>Dent Cool Clinic</h4>
@@ -740,7 +741,7 @@
                             <div class="item photography">
                                 <a href="project-3.html" data-dsn-grid="move-up">
                                     <img class="has-top-bottom" src="assets/img/Projectsnew/3.png" alt="" />
-                                    <div class="item-border"></div>
+                                    <!-- <div class="item-border"></div> -->
                                     <div class="item-info">
                                         <h5 class="cat">Front</h5>
                                         <h4>Wings Studio</h4>
@@ -751,8 +752,8 @@
 
                             <div class="item photography">
                                 <a data-dsn-grid="move-up">
-                                    <img class="has-top-bottom" src="assets/img/Projectsnew/4.jpg" alt="" />
-                                    <div class="item-border"></div>
+                                    <img class="has-top-bottom" src="assets/img/Projectsnew/4.png" alt="" />
+                                    <!-- <div class="item-border"></div> -->
                                     <div class="item-info">
                                         <h5 class="cat">Panel van</h5>
                                         <h4>Best Print</h4>
@@ -762,8 +763,8 @@
 
                             <div class="item brand">
                                 <a class="effect-ajax" data-dsn-ajax="work" data-dsn-grid="move-up">
-                                    <img class="has-top-bottom" src="assets/img/Projectsnew/1.jpg" alt="" />
-                                    <div class="item-border"></div>
+                                    <img class="has-top-bottom" src="assets/img/Projectsnew/1.png" alt="" />
+                                    <!-- <div class="item-border"></div> -->
                                     <div class="item-info">
                                         <h5 class="cat">City sign</h5>
                                         <h4>Turkeya Clinic</h4>
@@ -987,7 +988,14 @@
 
 
 
-
+            <div class="box-seat box-seat-full">
+                <div class="container-fluid">
+                    <div class="inner-img" data-dsn-grid="move-up">
+                        <img data-dsn-scale="1" data-dsn-y="15%" style=" top: 0 !important;
+                        height: auto !important;" src="assets/img/demos/business-consulting-5/blog/5.png" alt="">
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -999,10 +1007,14 @@
 
 
             <div class="container-fluid p-0">
-                <div class="row g-0">
+                <!-- <div class="row g-0">
                     <div class="col">
 
                         <div class="thumb-info-container-full-img">
+                            <span
+                            class="thumb-info p-relative z-index-1 thumb-info-no-borders thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear bg-transparent"
+                            data-full-width-img-src="assets/img/demos/business-consulting-5/blog/5.png"></span>
+
                             <div class="owl-carousel p-relative owl-theme full-width m-0"
                                 data-plugin-options="{'items': 4, 'loop': false, 'nav': false, 'dots': false}">
                                 <div>
@@ -1061,7 +1073,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -1087,7 +1099,7 @@
 
 
 
-                <div class="box-seat box-seat-full" style="margin-top: 80px;">
+                <div class="box-seat box-seat-full">
                     <div class="container-fluid">
                         <div class="bg has-top-bottom" id="dsn-hero-parallax-img" data-dsn-ajax="img">
                             <div class=" " data-dsn="video" data-overlay="4">
@@ -1384,6 +1396,28 @@
             myTextElement.style.position = 'relative';
             myTextElement.style.top = '200px';
         }, 6000); // 6000 milliseconds = 6 seconds
+    </script>
+
+
+    <script>
+
+        window.onload = (event) => { myFunction(event) };
+
+        function myFunction(event) {
+
+            let myvid = document.getElementById("myvid");
+
+            //# if BIGGER THAN the 800 pixels
+            if (screen.width > 800) { myvid.src = "assets/img/slider.mp4"; }
+
+            //# if SMALLER THAN or EQUAL-TO the 800 pixels
+            if (screen.width <= 800) { myvid.src = "assets/img/mobileSlider.mp4"; }
+
+            //# load URL (for playback)
+            myvid.load();
+
+        }
+
     </script>
 
     <!-- <script>
